@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<html>
+
+<head>
+    <title>Basic Validation Example</title>
+</head>
+
+<body>
+    <!--Advanced Validation Example-->
+    <h3>Enter a Valid(Any) Email!</h3>
+    {% with messages = get_flashed_messages() %} 
+        {% if messages %} 
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %} 
+        {% endif %} 
+    {% endwith %}
+    <form action='/process' , method='POST'>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="text">
+        
+        <p>Name:
+        <input type="text" name="name">
+        <input id = "submit" type="submit" value="Submit">
+        </p>
+        Comment:
+        <input type="text" name="comment">
+        <input id = "comment" type="submit" value="Submit">
+            <!-- <br>
+        <button>Submit</button> -->
+
+
+        
+    </form>
+
+<!-- 
+    <form action='/process' method='POST'>
+        Name:
+        <input type="text" name="name">
+        <input id = "submit" type="submit" value="Submit">
+
+    </form>
+
+    <form action='/process' method='POST'>
+        Comment:
+        <input type="text" name="comment">
+        <input id = "comment" type="submit" value="Submit">
+
+    </form> -->
+
+
+</body>
+
+</html>
